@@ -1,5 +1,6 @@
 package com.mrob.sa_ries;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.support.design.widget.FloatingActionButton;
@@ -23,8 +24,10 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Enter a number to approximate:", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                // Snackbar.make(view, "Enter a number to approximate:", Snackbar.LENGTH_LONG)
+                //         .setAction("Action", null).show();
+                Intent i = new Intent(MainActivity.this, EnterTargetNumber.class);
+                startActivity(i);
             }
         });
 
